@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 * {
@@ -12,6 +13,7 @@ body {
   font-style: normal;
   background-color: #010103;
   padding-top: 60px;
+  overflow-x: hidden;
 }
 
 .hidden-bars {
@@ -35,7 +37,6 @@ section {
 .nav {
   justify-content: space-between;
   margin: 0.6rem 5.3125rem;
-  
 }
 .left-nav:hover {
   cursor: pointer;
@@ -77,7 +78,6 @@ section {
   background-image: url(./images/home-img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 .section-1 {
@@ -130,8 +130,6 @@ section {
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
- 
-
 }
 .section-head h2 {
   width: 100%;
@@ -223,10 +221,7 @@ section {
 }
 .section-4-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(19.375rem, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(19.375rem, 1fr));
   gap: 0.9375rem;
   margin: 0px 5.3125rem;
 }
@@ -237,7 +232,6 @@ section {
   margin: 0 13px;
   font-size: 1.5625rem;
   color: #ffffff;
-  
 }
 .product-text {
   color: #ffffff;
@@ -315,7 +309,7 @@ section {
   height: 100%;
 }
 .contact-2 {
-color: #ffffff;
+  color: #ffffff;
   background-color: #13131a;
   display: flex;
   flex-direction: column;
@@ -323,7 +317,6 @@ color: #ffffff;
   justify-content: center;
   text-align: center;
   padding: 2rem;
-
 }
 .contact-2 > * {
   margin: 0.625rem;
@@ -355,7 +348,6 @@ input[type="number"] {
   width: 100%;
   font-size: 1.0625rem;
   padding: 0 1rem;
-
 }
 .input-tabs {
   display: flex;
@@ -365,7 +357,6 @@ input[type="number"] {
   border: 1px solid #ffffff4d;
   width: 100%;
   padding: 0 1.25rem;
-  
 }
 .vert-align {
   font-size: 1.25rem;
@@ -473,7 +464,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.footer-nav { 
+.footer-nav {
   border: 1px solid #ffffff4d;
   text-align: center;
   font-size: 20px;
@@ -490,18 +481,130 @@ footer {
     cursor: pointer;
     color: #ffffff;
     background-color: #d3ad7f;
-    
   }
 }
-.author {
-  margin: 20px;
-}
+
 .author p,
 .author a {
   text-transform: capitalize;
   text-align: center;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-decoration: none;
-  
+}
+.author {
+  margin: 15px;
+}
+@media (max-width: 800px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .middle-nav {
+    display: none;
+  }
+  .hidden-bars {
+    display: inline;
+  }
+  .nav {
+    margin: 0.6rem 0.625rem;
+  }
+}
+@media (max-width: 681px) {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .middle-nav {
+    display: none;
+  }
+  .hidden-bars {
+    display: inline;
+  }
+  .nav {
+    margin: 0.6rem 0.625rem;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  #home {
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+
+  .section-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  .section-1 h1 {
+    font-size: 30px;
+    padding: 5px;
+    width: 100%;
+  }
+  .section-1 .btn {
+    padding: 10px;
+    margin: 10px;
+  }
+  .section-1 p {
+    padding: 10px;
+    font-size: 13.6px;
+  }
+  .section-1 h1 > br {
+    display: none;
+  }
+
+  html {
+    font-size: 85%;
+  }
+  .socials-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    height: auto;
+  }
+  .socials {
+    width: 40px;
+    height: 40px;
+  }
+  footer {
+    padding: 0;
+    background-color: #13131a;
+    margin: 10px 0 0 0;
+  }
+  .section-2-container,
+  .section-5-container,
+  .section-3-container,
+  .section-4-container,
+  .section-6-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex: 1;
+  }
+
+  #products,
+  #menu,
+  #contact,
+  .box,
+  .box1,
+  .box-4,
+  .review-section {
+    width: 100%;
+  }
 }
